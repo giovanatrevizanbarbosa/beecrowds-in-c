@@ -15,6 +15,14 @@ Seu programa dever√° imprimir a soma da quantidade de pedidos de cada pessoa. N√
 #include <stdio.h>
 
 int main(){
-
+    int t, i, n;
+    while(t != 0){
+        scanf("%d", &t);
+        for(i = 0; i < t; i++){
+            scanf("%d", &n);
+            (n % 2) ? printf("%d\n", (n * 2) - 1) : printf("%d\n", (n * 2) - 2);
+        }
+    }
+    
     return 0;
 }
