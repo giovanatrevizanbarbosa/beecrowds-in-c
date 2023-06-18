@@ -1,0 +1,28 @@
+// Faça um programa que leia um valor T e preencha um vetor N[1000] com a sequência de valores de 0 até T-1 repetidas vezes, conforme exemplo abaixo. Imprima o vetor N.
+
+// Entrada
+// A entrada contém um valor inteiro T (2 ≤ T ≤ 50).
+
+// Saída
+// Para cada posição do vetor, escreva "N[i] = x", onde i é a posição do vetor e x é o valor armazenado naquela posição.
+
+#include <stdio.h>
+#define VETOR 1000
+
+int main(){
+    int t;
+    int n[VETOR];
+
+    scanf("%d", &t);
+    for(int i = 0; i < VETOR; i++){
+        n[i] = i % t;
+        if(n[i] < t){
+            printf("N[%d] = %d\n", i, n[i]);
+        }else{
+            n[i] = 0;
+            printf("N[%d] = %d\n", i, n[i]);
+        }
+    }
+
+    return 0;
+}
